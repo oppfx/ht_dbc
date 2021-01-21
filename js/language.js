@@ -146,7 +146,7 @@ var indexhtml = {
         'en-us':'Subscripe'
     },
     pst1:{
-        'zh-cn':'DollarBalance Share (DBS)为项目股份，持有DBS股份用户可以直接享受DBC通胀分成(25%)，每个通胀纪元都可以获取分红，总量500000，不可增发，合约已开源',
+        'zh-cn':'DollarBalance Share (DBS)为项目股份，持有DBS股份用户可以直接分享DBC通胀分成(25%)，每个通胀纪元都可以获取分红，总量500000，不可增发，合约已开源',
         'en-us':'DollarBalance Share (DBS) is a project share. Users who hold DBS shares can directly enjoy the DBC inflation share (25%).Every inflation epoch can get dividends. The total supply is 500000. Never issue more, and the contract is open source.'
     },
     pst2:{
