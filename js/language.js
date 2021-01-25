@@ -125,6 +125,19 @@ var indexhtml = {
         'zh-cn':'赎回时赚取保费',
         'en-us':'Earn premiums upon redemption'
     },
+    
+    sebanks:{
+        'zh-cn':'种子银行',
+        'en-us':'Seed Banks'
+    },
+    sbt1:{
+        'zh-cn':'选择一家种子银行',
+        'en-us':'Pick a Seed Bank.'
+    },
+    sbt2:{
+        'zh-cn':'通过质押单个代币获得DollarBalance Cash (DBC)',
+        'en-us':'Earn DollarBalance Cash (DBC) by staking a single token'
+    },
     fpt1:{
         'zh-cn':'选择一家银行',
         'en-us':'Pick a Bank.'
@@ -369,6 +382,14 @@ var indexhtml = {
     comson:{
         'zh-cn':'即将开始',
         'en-us':'Coming soon'
+    },
+    bmpt2:{
+        'zh-cn':'当前纪元奖励',
+        'en-us':'Current Epoch Reward'
+    },
+    bmpt3:{
+        'zh-cn':'当前池子奖励',
+        'en-us':'Current Pool Reward'
     },
 
     staked:{

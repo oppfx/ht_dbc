@@ -6,11 +6,11 @@
     <title>Dollar Balance Cash -- Heco</title>
     <link rel=icon href=favicon.ico>
 
-    <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css>
-    <link href=https://cdn.jsdelivr.net/gh/oppfx/ht_dbc/css/app.css rel=stylesheet>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/gh/oppfx/ht_dbc/css/app.css" rel="stylesheet"> -->
    
-    <!-- <link href="./css/bootstrap.min.css" rel="stylesheet">
-    <link href="./css/app.css" rel="stylesheet"> -->
+    <link href=./css/bootstrap.min.css rel=stylesheet>
+    <link href=./css/app.css rel=stylesheet>
   </head>
 <body class=bg-theme>
   <div class="main-load text-center" style="margin-top: 5rem;"> 
@@ -44,6 +44,9 @@
           <!-- <li class="nav-item">
             <a class="nav-link yellow" href="#/presale">DBS {{i18n-presale}}</a>
           </li> -->
+          <li class=nav-item id=seedbanks_li>
+            <a class=nav-link href=#/seedbanks>{{i18n-sebanks}}</a>
+          </li>
           <li class=nav-item id=banks_li>
             <a class=nav-link href=#/banks>{{i18n-banks}}</a>
           </li>
@@ -168,6 +171,30 @@
       </div>
 
     </div>
+
+<!--seed banks-page -->
+    <div class="custom_page container text-center hide" id=seedbanks>
+      
+      <div class=m-3>
+        <img src=./img/bank3.png style="width: 8rem;">
+      </div>
+      <div class=h1>
+        {{i18n-sbt1}}
+      </div>
+      <div class=h4>
+        {{i18n-sbt2}}
+      </div>
+      <div> <svg t=1610438812709 class="icon vertical-center" viewBox="0 0 1024 1024" version=1.1 xmlns=http://www.w3.org/2000/svg p-id=1128 width=15 height=15><path d="M512 102.4c-225.28 0-409.6 184.32-409.6 409.6s184.32 409.6 409.6 409.6 409.6-184.32 409.6-409.6-184.32-409.6-409.6-409.6z m220.16 332.8l-240.64 250.88c-5.12 5.12-10.24 5.12-15.36 10.24-5.12 0-15.36-5.12-15.36-10.24l-153.6-153.6c-10.24-10.24-10.24-25.6 0-35.84 10.24-10.24 25.6-10.24 35.84 0l128 128 225.28-230.4c10.24-10.24 25.6-10.24 35.84 0 10.24 10.24 10.24 30.72 0 40.96z" p-id=1129 fill=#1afa29></path></svg> Contract:<a class="sb_contract gray" target=_blank href="">- -</a></div>
+
+      <div class=banks_pool>
+        <div class="row mt-4 sb_pool_list justify-content-center">
+          <div class="h2 text-center w-100 gray">Loading...</div> 
+        
+        </div>
+
+      </div>
+
+    </div>
 <!-- bonds-page -->
     <div class="custom_page container text-center hide" id=bonds>
       
@@ -264,7 +291,7 @@
          {{i18n-stake}} <span class=bm_name></span> {{i18n-bmpt1}}
       </div>
       <div class="m-3 bm_lp hide"><a class="h2 yellow bm_lp_url" href="" target=_blank> {{i18n-add}} <span class=bm_name></span> </a></div>
-      <div class="gray h4 m-2">{{i18n-bmpt2}} :<span class=bm_pool_reward>0.00</span></div>
+      <div class="gray h4 m-2"><span class=bm_reward_txt>{{i18n-bmpt2}}</span>  : <span class=bm_pool_reward>0.00</span></div>
      
       <div class="banks_pool pool_mining">
         <div class="row mt-4 justify-content-center">
@@ -295,7 +322,7 @@
               </div>
               <div class="mt-4 mb-2 bm_staked_btns">
                 <button class="btn btn-dark badge-pill yellow" onclick=App.showStakeModal()>{{i18n-stake}}</button>
-                <button class="btn btn-dark badge-pill yellow" onclick=App.withdraw()>{{i18n-withdraw}}</button>
+                <button class="btn btn-dark badge-pill yellow bm_withdraw" onclick=App.withdraw()>{{i18n-withdraw}}</button>
               </div>
             </div>
           </div> 
@@ -452,7 +479,7 @@
             </div>
             <div class="mt-4 br_staked_btns hide">
               <button class="btn btn-dark badge-pill yellow" onclick=App.showStakeShareModal()>{{i18n-stake}}</button>
-              <button class="btn btn-dark badge-pill yellow" onclick=App.withdraw(true)>{{i18n-withdraw}}</button>
+              <button class="btn btn-dark badge-pill yellow br_withdraw_btn" onclick=App.withdraw(true)>{{i18n-withdraw}}</button>
             </div>
           </div>
         </div> 
@@ -709,13 +736,13 @@
   <!-- <script src="https://cdn.jsdelivr.net/npm/web3@1.3.1/dist/web3.min.js"></script> -->
   
   
-  <!-- <script src="js/jquery-2.1.4.min.js"></script>
-  <script src="js/bootstrap-4.0.min.js"></script>
-  <script src="js/language.js"></script> -->
+  <!-- <script src=js/jquery-2.1.4.min.js></script>
+  <script src=js/bootstrap-4.0.min.js></script>
+  <script src=js/language.js></script> -->
 
-  <script src=https://cdn.jsdelivr.net/npm/jquery@2.1.4/dist/jquery.min.js></script>
-  <script src=https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js integrity=sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx crossorigin=anonymous></script>
-  <script src=https://cdn.jsdelivr.net/gh/oppfx/ht_dbc@latest/js/language.js></script>
-  <script src=https://cdn.jsdelivr.net/gh/oppfx/ht_dbc@1.08/js/path.js?de7d57ee2144c5d68111></script></body>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@2.1.4/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/gh/oppfx/ht_dbc@latest/js/language.js"></script>
+  <script src=https://cdn.jsdelivr.net/gh/oppfx/ht_dbc@1.09/js/path.js?0e301c84e402d7dfabcf></script></body>
 </html>
 
