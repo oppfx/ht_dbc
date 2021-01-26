@@ -291,7 +291,7 @@ var indexhtml = {
 
   var appjs ={
     version:{
-        'zh-cn':'1.02',
+        'zh-cn':'1.11',
         'en-us':'QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm1234567890.,/#:：'
     },
     weight:{
@@ -301,6 +301,10 @@ var indexhtml = {
     neterr:{
         'zh-cn':'网络错误',
         'en-us':'Network Error'
+    },
+    totstake:{
+        'zh-cn':'总质押数:',
+        'en-us':'Total Staked:'
     },
     buy:{
         'zh-cn':'购买',
