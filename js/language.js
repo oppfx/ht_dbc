@@ -371,6 +371,10 @@ var indexhtml = {
         'zh-cn':'获取',
         'en-us':'Earn'
     },
+    earn2:{
+        'zh-cn':'赚取:',
+        'en-us':'Earn:'
+    },
     staket:{
         'zh-cn':'质押',
         'en-us':'Stake'
