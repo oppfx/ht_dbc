@@ -84,6 +84,10 @@ var indexhtml = {
         'zh-cn':'财政储备金',
         'en-us':'Treasury Amount'
     },
+    buysell:{
+        'zh-cn':'购买/出售',
+        'en-us':'Buy/Sell'
+    },
     
     price:{
         'zh-cn':'价格',
