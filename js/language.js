@@ -7,9 +7,34 @@ var indexhtml = {
         'zh-cn':'添加',
         'en-us':'Add'
     },
-    banks:{
-        'zh-cn':'银行',
-        'en-us':'Banks'
+    
+    defla:{
+        'zh-cn':'通缩',
+        'en-us':'Deflation'
+    },
+    open:{
+        'zh-cn':'开启',
+        'en-us':'Open'
+    },
+    lock:{
+        'zh-cn':'锁仓',
+        'en-us':'Lock'
+    },
+    lockdura:{
+        'zh-cn':'锁仓时长',
+        'en-us':'Lock Time'
+    },
+    amount:{
+        'zh-cn':'数量',
+        'en-us':'Amount'
+    },
+    cashbanks:{
+        'zh-cn':'现金银行',
+        'en-us':'CashBanks'
+    },
+    sharebanks:{
+        'zh-cn':'股份银行',
+        'en-us':'ShareBanks'
     },
     bonds:{
         'zh-cn':'债券',
@@ -96,7 +121,13 @@ var indexhtml = {
     price2:{
         'zh-cn':'价格',
         'en-us':' Price'
-    },   
+    },
+      
+    minesp:{
+        'zh-cn':'挖矿速度',
+        'en-us':'Mining Speed'
+    },
+
     hpt1:{
         'zh-cn':'欢迎来到 DollarBalance Cash!',
         'en-us':'Welcome to DollarBalance Cash!'
@@ -108,6 +139,10 @@ var indexhtml = {
     tsupply:{
         'zh-cn':'总供应量',
         'en-us':'Total Supply'
+    },
+    minesupply:{
+        'zh-cn':'流通量&挖矿',
+        'en-us':'Liquidity&Mining'
     },
     cliquidty:{
         'zh-cn':'当前流通量',
@@ -132,11 +167,15 @@ var indexhtml = {
     
     sebanks:{
         'zh-cn':'种子银行',
-        'en-us':'Seed Banks'
+        'en-us':'SeedBanks'
+    },
+    shbt1:{
+        'zh-cn':'选择一家股份银行',
+        'en-us':'Pick a Share Bank'
     },
     sbt1:{
-        'zh-cn':'选择一家种子银行',
-        'en-us':'Pick a Seed Bank.'
+        'zh-cn':'选择一家种子银行 (已结束)',
+        'en-us':'Pick a Seed Bank (Ended)'
     },
     sbt2:{
         'zh-cn':'通过质押单个代币获得DollarBalance Cash (DBC)',
@@ -295,12 +334,20 @@ var indexhtml = {
 
   var appjs ={
     version:{
-        'zh-cn':'1.11',
+        'zh-cn':'1.20',
         'en-us':'QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm1234567890.,/#:：'
     },
     weight:{
         'zh-cn':'权重',
         'en-us':'Weight'
+    },
+    days:{
+        'zh-cn':'天',
+        'en-us':'days'
+    },
+    day:{
+        'zh-cn':'天',
+        'en-us':'day'
     },
     neterr:{
         'zh-cn':'网络错误',
@@ -391,9 +438,21 @@ var indexhtml = {
         'zh-cn':'　质押　',
         'en-us':'Stake'
     },
+    withdraw:{
+        'zh-cn':'　提现　',
+        'en-us':'Withdraw'
+    },
     comson:{
         'zh-cn':'即将开始',
         'en-us':'Coming soon'
+    },
+    bmpt1:{
+        'zh-cn':'即可获取 DollarBalance Cash (DBC)',
+        'en-us':'and earn DollarBalance Cash (DBC)'
+    },
+    bmpt4:{
+        'zh-cn':'即可获取 DollarBalance Share (DBS)',
+        'en-us':'and earn DollarBalance Cash (DBS)'
     },
     bmpt2:{
         'zh-cn':'当前纪元奖励',

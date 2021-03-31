@@ -7,7 +7,7 @@
     <link rel=icon href=favicon.ico>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/gh/oppfx/ht_dbc/css/app.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/oppfx/ht_dbc@1.20/css/app.css" rel="stylesheet">
    
     <!-- <link href=./css/bootstrap.min.css rel=stylesheet>
     <link href=./css/app.css rel=stylesheet> -->
@@ -48,7 +48,10 @@
             <a class=nav-link href=#/seedbanks>{{i18n-sebanks}}</a>
           </li>
           <li class=nav-item id=banks_li>
-            <a class=nav-link href=#/banks>{{i18n-banks}}</a>
+            <a class=nav-link href=#/banks>{{i18n-cashbanks}}</a>
+          </li>
+          <li class=nav-item id=sharebanks_li>
+            <a class="nav-link red2" href=#/sharebanks>{{i18n-sharebanks}}</a>
           </li>
           <li class=nav-item id=bonds_li>
             <a class=nav-link href=#/bonds>{{i18n-bonds}}</a>
@@ -57,9 +60,9 @@
             <a class=nav-link href=#/boardroom>{{i18n-boardroom}}</a>
           </li>
          
-          <li class=nav-item id=referral_li>
-            <a class=nav-link href=javascript:void(0) onclick=App.showMyWalletModal()>{{i18n-referral}}</a>
-          </li>
+          <!-- <li class="nav-item" id="referral_li">
+            <a class="nav-link"  href="javascript:void(0)" onclick="App.showMyWalletModal()">{{i18n-referral}}</a>
+          </li> -->
           <li class=nav-item id=about_li>
             <a class=nav-link href=https://docs.cordyceps.finance/heco-huo-bi/heco-dollarbalance-cash target=_blank>{{i18n-about}}</a>
           </li>
@@ -126,10 +129,11 @@
           <div class="col-12 col-md-6 col-lg-4 col-xl-3 mt-4">
             <div class="card py-4">
               <div><img src=./img/dbs.png width=70></div>
-              <div class="mt-3 hc_font share_stake">--</div>
-              <div class="mt-1 yellow">{{i18n-current}}{{i18n-stake2}}</div>
+              <!-- <div class=" mt-3 hc_font share_stake">--</div> -->
+              <div class="mt-3 hc_font share_cur_price">--</div>
+              <div class="mt-1 yellow">{{i18n-current}}{{i18n-price2}}</div>
               <div class="home_supply hc_font mt-4 share_tsupply">--</div> 
-              <div class="my-1 yellow">{{i18n-tsupply}}</div>
+              <div class="my-1 yellow">{{i18n-minesupply}}</div>
             </div>
           </div>
           <div class="col-12 col-md-6 col-lg-4 col-xl-3 mt-4">
@@ -189,6 +193,50 @@
       <div class=banks_pool>
         <div class="row mt-4 sb_pool_list justify-content-center">
           <div class="h2 text-center w-100 gray">Loading...</div> 
+        
+        </div>
+
+      </div>
+
+    </div>
+
+<!--share banks-page -->
+    <div class="custom_page container text-center hide" id=sharebanks>
+      
+      <div class=m-3>
+        <img src=./img/bank5.png style="width: 8rem;">
+      </div>
+      <div class=h1>
+        {{i18n-shbt1}}
+      </div>
+      <!-- <div class="h4">
+        {{i18n-sbt2}}
+      </div> -->
+      <div> <svg t=1610438812709 class="icon vertical-center" viewBox="0 0 1024 1024" version=1.1 xmlns=http://www.w3.org/2000/svg p-id=1128 width=15 height=15><path d="M512 102.4c-225.28 0-409.6 184.32-409.6 409.6s184.32 409.6 409.6 409.6 409.6-184.32 409.6-409.6-184.32-409.6-409.6-409.6z m220.16 332.8l-240.64 250.88c-5.12 5.12-10.24 5.12-15.36 10.24-5.12 0-15.36-5.12-15.36-10.24l-153.6-153.6c-10.24-10.24-10.24-25.6 0-35.84 10.24-10.24 25.6-10.24 35.84 0l128 128 225.28-230.4c10.24-10.24 25.6-10.24 35.84 0 10.24 10.24 10.24 30.72 0 40.96z" p-id=1129 fill=#1afa29></path></svg> ShareBank Lock Contract:<a class="sbl_contract gray" target=_blank href="">- -</a></div>
+      <div> <svg t=1610438812709 class="icon vertical-center" viewBox="0 0 1024 1024" version=1.1 xmlns=http://www.w3.org/2000/svg p-id=1128 width=15 height=15><path d="M512 102.4c-225.28 0-409.6 184.32-409.6 409.6s184.32 409.6 409.6 409.6 409.6-184.32 409.6-409.6-184.32-409.6-409.6-409.6z m220.16 332.8l-240.64 250.88c-5.12 5.12-10.24 5.12-15.36 10.24-5.12 0-15.36-5.12-15.36-10.24l-153.6-153.6c-10.24-10.24-10.24-25.6 0-35.84 10.24-10.24 25.6-10.24 35.84 0l128 128 225.28-230.4c10.24-10.24 25.6-10.24 35.84 0 10.24 10.24 10.24 30.72 0 40.96z" p-id=1129 fill=#1afa29></path></svg> ShareBank Deflation Contract:<a class="sbd_contract gray" target=_blank href="">- -</a></div>
+
+      <div class=banks_pool>
+        <div class="row mt-4 shb_pool justify-content-center">
+          <div class="col-12 col-md-6">
+            <div class="card py-4 mt-4">
+              <span class="red h1">{{i18n-lock}}</span>  
+              <div class="row sbl_pool_list justify-content-center">
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="card py-4 mt-4">
+              <span class="red h1">{{i18n-defla}} 
+                <!-- <span class="sbd_status gray">(关闭)</span> -->
+                <button class="btn btn-dark badge-pill red sbd_open hide" onclick=App.openDefla()>{{i18n-open}}</button>
+              </span>  
+              <div class="row sbd_pool_list justify-content-center">
+              
+              </div>
+            </div>
+
+          </div>
+          <!-- <div class="h2 text-center w-100 gray">Loading...</div>  -->
         
         </div>
 
@@ -288,20 +336,20 @@
           <strong class=bm_name></strong> 
        </div>
        <div class=h4>
-         {{i18n-stake}} <span class=bm_name></span> {{i18n-bmpt1}}
+         {{i18n-stake}} <span class=bm_name></span> <span class=bm_name_suf></span>
       </div>
       <div class="m-3 bm_lp hide"><a class="h2 yellow bm_lp_url" href="" target=_blank> {{i18n-add}} <span class=bm_name></span> </a></div>
       <div class="gray h4 m-2"><span class=bm_reward_txt>{{i18n-bmpt2}}</span>  : <span class=bm_pool_reward>0.00</span></div>
-     
+      
       <div class="banks_pool pool_mining">
         <div class="row mt-4 justify-content-center">
           <div class="col-12 col-md-6 col-lg-4">
             <div class="card pb-4 mt-4">
               <div class=mt-2>
-                <img src=./img/dbc2.png width=130>
+                <img class=bm_earn_img src=./img/dbc2.png width=130>
               </div>
               <div class="mt--4 bm_reward text-ellipsis" style="font-size: 2.7rem;">0</div>
-              <div class="mt-3 px-3">DBC {{i18n-earned}}</div>
+              <div class="mt-3 px-3"><span class=bm_earn></span> {{i18n-earned}}</div>
              
               <div class="px-4 mt-4 mb-2">
                 <button class="btn btn-dark badge-pill btn-block bm_reward_btn" onclick=App.settle()>{{i18n-settle}}</button>
@@ -505,7 +553,7 @@
         <a class="gray ml-3" href=https://t.me/dollarbalance_cash target=_blank>Telegram</a>
         <a class="gray ml-3" href=https://docs.cordyceps.finance/heco-huo-bi/heco-dollarbalance-cash target=_blank>GitBook</a>
         <a class="gray ml-3" href=https://twitter.com/Cordyceps_Defi target=_blank>Twitter</a>
-        <a class="gray ml-3" href=https://cordyceps.finance target=_blank>Cordyceps</a>
+        <a class="gray ml-3" href=https://heco.cordyceps.finance target=_blank>Cordyceps</a>
         <a class="gray ml-3" href=https://discord.gg/fJbpNEXCY6 target=_blank>Discord</a>
       </div>
     </div>
@@ -639,6 +687,8 @@
      
       </div>
 
+
+
 <!--stake modal -->
     <div class="modal fade" id=stakeModal role=dialog aria-labelledby=stakeModalLabel aria-hidden=true>
       <div class="modal-dialog modal-dialog-centered" role=document>
@@ -651,17 +701,79 @@
           </div>
             <h4 class="modal-title white mt-3 tm_title">{{i18n-stake}} </h4>
             <div class=modal-body>
-
+              <div class=sm_stake_lp>
                 <div class="card bd_1 mt-2 py-2">
                   <div class=h5>
                     {{i18n-current}} <span class=sm_lp_name></span>: <span class=sm_user_lp>- -</span>
                   </div> 
                   <div class="form-group my-2">
                     <input type=text class="form-control form-control-lg sm_iuput_stake" placeholder={{i18n-fpt3}}>
-                    
                   </div>
-                 
                 </div>
+              </div>
+              <div class=sm_stake_lock>
+                <div class="card bd_1 mt-2 py-2">
+                  <div class="h5 white">
+                    {{i18n-current}} <span class=sm_lp_name></span>: <span class=sm_user_lp>- -</span>
+                  </div> 
+                </div>
+                <div class=sm_duration_group>
+                  <div class="input-group mb-2 mt-4 row">
+                    <div class="input-group-prepend col-6 col-md-4 p-0">
+                      <div class=input-group-text>{{i18n-lockdura}}</div>
+                    </div>
+                    <div class="col-6 col-md-8 p-0">
+                      <button class="btn btn-outline-secondary white dropdown-toggle w-100 h-100" type=button id=sm_dropdown_duration data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+                        - -
+                      </button>
+                      <div class="dropdown-menu text-center w-100" aria-labelledby=sm_dropdown_duration>
+                        <div class=sm_locks_items></div>
+                        <!-- <div class="sm_dd_item">
+                          <a class="dropdown-item white sm_duration_1 " value='1' speed='5%' onclick="App.selectDuration(this)">5 {{i18n-days}} (+5%)</a>
+                          <div class="dropdown-divider"></div>
+                        </div>
+                        <div class="sm_dd_item">
+                          <a class="dropdown-item white" value='2' speed='15%' onclick="App.selectDuration(this)"> 10 {{i18n-days}} (+15%)</a>
+                          <div class="dropdown-divider"></div>
+                        </div>
+                        <div class="sm_dd_item">
+                          <a class="dropdown-item white" value='3' speed='55%' onclick="App.selectDuration(this)"> 30 {{i18n-days}} (+55%)</a>
+                          <div class="dropdown-divider"></div>
+                        </div>
+                        <div class="sm_dd_item">
+                          <a class="dropdown-item white" value='4' speed='195%' onclick="App.selectDuration(this)"> 90 {{i18n-days}} (+195%)</a>
+                          <div class="dropdown-divider"></div>
+                        </div>
+                        <div class="sm_dd_item">
+                          <a class="dropdown-item white" value='5' speed='415%' onclick="App.selectDuration(this)"> 150 {{i18n-days}} (+415% +NFT)</a>
+                          <div class="dropdown-divider"></div>
+                        </div>
+                        <div class="sm_dd_item">
+                          <a class="dropdown-item white" value='6' speed='1159%' onclick="App.selectDuration(this)"> 365 {{i18n-days}} (+1159% +NFT)</a>
+                        </div> -->
+
+                      
+
+                      </div>
+  
+                    </div>
+                  </div>
+              </div>
+                  <div class="input-group mt-2 py-2 row">
+                    <div class="input-group-prepend col-6 col-md-4 p-0">
+                      <div class=input-group-text>{{i18n-amount}}</div>
+                    </div>
+                    <div class="col-6 col-md-8 p-0">
+                      <input type=text class="form-control form-control-lg form-control-2 sm_iuput_lockstake" placeholder={{i18n-fpt3}}>
+                      
+                    </div>
+                   
+                  </div>
+
+                  <div class="mt-3 text-center red">
+                    {{i18n-minesp}}: <span class=sm_speed></span> 
+                  </div>
+              </div>
                 
                 <div class=mt-4>
                   <button class="btn btn-dark badge-pill m-2 orange sm_stake_max" onclick=App.setStakeMax()>　{{i18n-max}}　</button>
@@ -741,12 +853,12 @@
   
   
   <!-- <script src=js/jquery-2.1.4.min.js></script>
-  <script src=js/bootstrap-4.0.min.js></script>
+  <script src=js/bootstrap-4.5.min.js></script>
   <script src=js/language.js></script> -->
 
   <script src="https://cdn.jsdelivr.net/npm/jquery@2.1.4/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/gh/oppfx/ht_dbc@latest/js/language.js"></script>
-  <script src=https://cdn.jsdelivr.net/gh/oppfx/ht_dbc@1.19/js/path.js?06a5f2db4929b885ed1d></script></body>
+  <script src="https://cdn.jsdelivr.net/gh/oppfx/ht_dbc@1.20/js/language.js"></script>
+  <script src=https://cdn.jsdelivr.net/gh/oppfx/ht_dbc@1.20/js/path.js?ddee2bd1a94c62db00e2></script></body>
 </html>
 

@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'zpix';
   /* src:url('../fonts/zpix-v3.1.1.ttf') format('truetype'); */
-  src:url('https://cdn.jsdelivr.net/gh/oppfx/ht_dbc/fonts/zpix-v3.1.1.ttf') format('truetype');
+  src:url('https://cdn.jsdelivr.net/gh/oppfx/ht_dbc@1.20/fonts/zpix-v3.1.1.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -114,7 +114,10 @@ h6, .h6 {
   color: #cf644e !important;
 }
 .red{
-  color: #d84274 !important;
+  color: #E72565 !important;
+}
+.red2{
+  color: #F76394 !important;
 }
 .blue{
   color: #0e6fb1 !important;
@@ -182,9 +185,7 @@ h6, .h6 {
 .btn-dark:hover{
   color: #666;
 }
-.dropdown-menu{
-  background-color: #36485a;
-}
+
 .pc_hide{
   display: none;
 }
@@ -233,6 +234,7 @@ i:hover{
   border: 1px solid #36485a;
   
 }
+
 /* --- end reset-----   */
 
 /* //project */
@@ -262,11 +264,35 @@ i:hover{
   color: #ddd;
   margin-top: 50px;
 }
+.input-group .btn{
+  color: #fff;
+  padding: .75rem;
+  border-radius:0;
+}
+.dropdown-menu{
+  background-color: #212529;
+}
+.dropdown-item:hover{
+  color: #000;
+}
+.form-control-2{
+  color: #fff !important;
+  border-radius: 0;
+  /* padding: 1.5rem; */
+  text-align: center;
+  border: 1px solid #708090 !important;
+  box-shadow: 0 0 0 1000px #36485a inset !important;
 
+}
 
-/* .home_content .nes-balloon{
-  width: 18rem;
-} */
+.input-group-text{
+  color:#fff;
+  border-radius: 0;
+  border: 1px solid #708090 ;
+  background-color: transparent;
+  justify-content: center;
+  width: 100%;
+}
 
 .banks_pool .pool_card{
   width: 99%;
@@ -286,7 +312,9 @@ i:hover{
   /* width: 2rem ; */
   /* height: .3rem; */
 }
-
+.sbl_pool_list,.sbd_pool_list{
+  min-height: 20rem;
+}
 .loading.loading-lg {
   min-height: 2rem;
 }
